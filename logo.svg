@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg x="-1324.71pt" y="-4645.22pt" width="7114.37pt" height="5714.23pt" viewBox="-1324.71 -4645.22 7114.37 5714.23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="1">
+    <title>Layer 3</title>
+  </g>
+  <g id="2">
+    <title>Layer 3</title>
+  </g>
+  <g id="3">
+    <title>Layer 4</title>
+    <defs>
+      <title>Path</title>
+      <g id="4">
+        <defs>
+          <path id="5" d="M-1324.71,-4645.22 C-1324.71,-4645.22,5789.66,-4645.22,5789.66,-4645.22 C5789.66,-4645.22,5789.66,1069.01,5789.66,1069.01 C5789.66,1069.01,-1324.71,1069.01,-1324.71,1069.01 C-1324.71,1069.01,-1324.71,-4645.22,-1324.71,-4645.22 z"/>
+        </defs>
+        <use xlink:href="#5" style="fill:#5f7177;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+      </g>
+    </defs>
+    <use xlink:href="#4"/>
+  </g>
+  <g id="6">
+    <title>Layer 2</title>
+    <g id="7">
+      <title>Layer 1</title>
+      <defs>
+        <title>Shape 105</title>
+        <g id="8">
+          <defs>
+            <path id="9" d="M4124.27,-124.32 C4124.27,-124.32,4184.86,-124.32,4184.86,-124.32 C4187.92,-144.86,4174.04,-728.697,4169.3,-903.725 C4224.78,-647.254,4758.17,-379.639,4757.45,-124.32 C4757.45,-124.32,4781.03,-124.32,4781.03,-124.32 C4780.36,-276.388,4777.1,-775.599,4792.65,-1006.72 C4792.65,-1006.72,4743.29,-1006.72,4743.29,-1006.72 C4744.73,-926.378,4748.03,-566.537,4753.86,-411.675 C4700.81,-541.963,4294.28,-813.688,4251.53,-1006.99 C4251.53,-1006.99,4142.58,-1007.15,4142.58,-1007.15 C4142.58,-1007.15,4143.67,-299.825,4124.27,-124.32 z"/>
+          </defs>
+          <use xlink:href="#9" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+          <use xlink:href="#9" style="fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-width:0;"/>
+        </g>
+      </defs>
+      <use xlink:href="#8"/>
+      <defs>
+        <title>Shape 20</title>
+        <g id="10">
+          <defs>
+            <path id="11" d="M423.506,-1766.76 C480.833,-1728.27,639.568,-1711.48,717.004,-1811.88 C717.004,-1811.88,1793.91,-3268.95,1793.91,-3268.95 C1793.91,-3268.95,3297.88,-746.185,3771.8,43.4162 C3858.27,187.478,4018.9,194.825,4108.43,129.718 C4191.26,69.4935,4241.74,-38.0297,4162.81,-178.801 C4162.81,-178.801,2022.57,-3791.56,2022.57,-3791.56 C1912.75,-3980.6,1762.06,-3986.3,1636.8,-3809.28 C1636.8,-3809.28,679.566,-2474.42,374.802,-2062.23 C283.178,-1938.31,363.47,-1807.07,423.506,-1766.76 z"/>
+          </defs>
+          <use xlink:href="#11" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+          <use xlink:href="#11" style="fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-width:0;"/>
+        </g>
+      </defs>
+      <use xlink:href="#10"/>
+      <defs>
+        <title>Shape 21</title>
+        <g id="12">
+          <defs>
+            <path id="13" d="M1759.11,-1457.95 C1759.13,-1383.57,1813.75,-1227.47,2012.82,-1227.73 C2434.78,-1228.28,3220.71,-1227.95,3220.71,-1227.95 C3220.71,-1227.95,3044.09,-1688.18,3044.09,-1688.18 C3044.09,-1688.18,2390.55,-1685.88,2013.37,-1687.43 C1831.28,-1688.18,1759.09,-1542.88,1759.11,-1457.95 z"/>
+          </defs>
+          <use xlink:href="#13" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+          <use xlink:href="#13" style="fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-width:0;"/>
+        </g>
+      </defs>
+      <use xlink:href="#12"/>
+      <defs>
+        <title>Compound Group</title>
+        <g id="14">
+          <defs>
+            <path id="15" d="M1674.99,-926.447 C1205.17,-1252.38,654.918,-529.673,1171.33,-181.226 C1643.33,137.258,2155.42,-593.146,1674.99,-926.447 z M1640.04,-913.858 C1240.06,-1140.42,829.698,-375.406,1231.65,-171.519 C1608.08,19.4224,1972.71,-725.432,1640.04,-913.858 z"/>
+          </defs>
+          <use xlink:href="#15" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+          <use xlink:href="#15" style="fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-width:0;"/>
+        </g>
+      </defs>
+      <use xlink:href="#14"/>
+      <defs>
+        <title>Shape 108</title>
+        <g id="16">
+          <defs>
+            <path id="17" d="M2139.52,-1006.23 C2139.52,-1006.23,2252.29,-1006.23,2252.29,-1006.23 C2320.47,-708.742,2400.74,-462.243,2462.68,-316.58 C2536.5,-442.282,2686.12,-1006.23,2686.12,-1006.23 C2686.12,-1006.23,2804.26,-1006.23,2804.26,-1006.23 C2875.95,-649.831,2971.86,-353.912,3049.14,-124.389 C3049.14,-124.389,2899.82,-124.389,2899.82,-124.389 C2867.36,-339.241,2767.44,-701.395,2699.33,-910.139 C2699.33,-910.139,2580.33,-560.855,2469.93,-124.389 C2469.93,-124.389,2407.1,-124.389,2407.1,-124.389 C2357.74,-381.667,2150.02,-913.444,2150.02,-913.444 C2101.54,-728.974,1945.49,-247.829,2080.95,-124.389 C2080.95,-124.389,1914.05,-124.925,1914.05,-124.925 C1914.05,-124.925,2139.52,-1006.23,2139.52,-1006.23 z"/>
+          </defs>
+          <use xlink:href="#17" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+          <use xlink:href="#17" style="fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-width:0;"/>
+        </g>
+      </defs>
+      <use xlink:href="#16"/>
+      <defs>
+        <title>Compound Group</title>
+        <g id="18">
+          <defs>
+            <path id="19" d="M119.102,-1005.54 C132.761,-797.169,138.563,-378.849,120.305,-130.595 C119.5,-119.638,456.003,-121.999,475.155,-123.821 C662.235,-141.616,842.973,-288.271,835.888,-593.079 C829.549,-865.81,635.349,-977.147,449.653,-1005.67 C402.634,-1012.9,119.102,-1005.54,119.102,-1005.54 z M239.404,-972.537 C222.096,-775.065,226.861,-305.769,247.166,-166.66 C248.588,-156.92,715.022,-84.6243,715.022,-565.905 C715.022,-1068.16,239.404,-972.537,239.404,-972.537 z"/>
+          </defs>
+          <use xlink:href="#19" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+          <use xlink:href="#19" style="fill:none;opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-width:0;"/>
+        </g>
+      </defs>
+      <use xlink:href="#18"/>
+    </g>
+  </g>
+</svg>
