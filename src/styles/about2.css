@@ -1,0 +1,35 @@
+.about2 {
+    color: #333333;
+    display: flex;
+    margin: 40px 10%; /* Adjusted margin for smaller screens */
+    align-items: stretch;
+    gap: 1vw;
+    font-size: 1.0rem;
+    flex-direction: column;
+}
+.about2 > p {
+    width: 75%;
+}
+.about2 > img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+}
+
+/* Media query for screens larger than 768px */
+@media only screen and (max-width: 768px) {
+    .about2 {
+        margin: 40px 10%; /* Revert margin for larger screens */
+        flex-direction: column; /* Change flex direction to row on larger screens */
+    }
+    .about2 > p {
+        width: 100%;
+
+    }
+    .about2 > img {
+        width: auto; /* Reset width to auto on larger screens */
+        height: 100%; /* Make the image fill the height of its container */
+        max-width: 100%; /* Limit image width to 50% of its container */
+        border-radius: 20px;
+    }
+}

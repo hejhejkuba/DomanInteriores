@@ -1,0 +1,53 @@
+
+.contact {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie poziome elementów */
+    align-items: center; /* Wyśrodkowanie pionowe elementów */
+    gap: 20px; /* Odstęp między elementami */
+    flex-wrap: wrap; /* Umożliwia zawijanie elementów w pionie */
+    background-color: #ece5da;
+    color: gray;
+    margin: 0;
+}
+
+.contact div {
+    text-align: center;
+}
+
+.contact h3 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 15px;
+
+}
+.contact a {
+    font-size: 1.0rem; /* zmniejszona czcionka linku */
+    padding: 10px; /* zmniejszony padding */
+}
+.contact a:link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid transparent; /* Ustawienie początkowej granicy na przezroczystą */
+    transition: border-color 0.5s ease-in, border-width 0.5s ease-in;
+}
+.contact a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact {
+        width: 100%;
+        flex-direction: column; /* Zmiana układu na pionowy */
+        align-items: flex-start; /* Wyrównanie elementów do lewej */
+    }
+    .contact div { /* Zapewnienie pełnej szerokości */
+        margin: 0;
+        padding: 0;
+        text-align: left; /* Wyrównanie tekstu do lewej */
+    }
+}

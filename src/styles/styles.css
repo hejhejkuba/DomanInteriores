@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: #F4F0E6;
+    overflow: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1, h2 {
+    font-family: 'Marhalika', serif; /* elegancki nagłówek */
+}
+h3{
+    font-weight: normal;
+    font-family: 'Marhalika', serif;
+}
+.make-bold{
+    font-weight: bold;
+}

@@ -1,0 +1,41 @@
+.about-wrapper {
+    width: 100vw;
+}
+
+.about {
+    color: #333333;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    margin: 40px 10%; /* Adjusted margin for smaller screens */
+    font-size: 1rem;
+}
+
+.about > .left,
+.about > .right {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Add some space between left and right on smaller screens */
+}
+
+.about > .left {
+    padding: 20px;
+}
+
+.about > .right > img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Media query for screens larger than 768px */
+@media only screen and (min-width: 768px) {
+    .about {
+        margin: 40px 10%; /* Revert margin for larger screens */
+    }
+
+    .about > .left,
+    .about > .right {
+        width: 50%; /* Split into two columns on larger screens */
+        margin-bottom: 0; /* Remove bottom margin for larger screens */
+    }
+}

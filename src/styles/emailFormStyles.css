@@ -1,0 +1,77 @@
+.email-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: sans-serif;
+}
+
+.email-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.email-form form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.email-form input,
+.email-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1.0rem;
+}
+
+.email-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ece5da;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 1rem auto; /* <== DODAJE WYŚRODKOWANIE */
+}
+
+
+.email-form button:disabled {
+    background-color: #333333;
+    cursor: not-allowed;
+}
+
+.email-form button:hover:not(:disabled) {
+    background-color: #c4b58f;
+}
+
+.email-form p {
+    text-align: center;
+    margin-top: 1rem;
+    color: green;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .email-form {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}

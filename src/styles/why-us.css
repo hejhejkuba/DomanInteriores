@@ -1,0 +1,60 @@
+.why-us-container {
+    display: flex;
+    justify-content: center;
+    margin: 80px 10%;
+}
+
+.why-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+}
+.card-wrapper-why-us {
+    align-items: stretch;
+    display: flex;
+    gap: 4vw;
+    margin-top: 20px;
+}
+.card-why-us {
+    flex: 1;
+    border-radius: 20px;
+    background-color: #ece5da;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.name-why-us {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+}
+.description-why-us {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+.card-why-us > .card-content > .card-icon > .material-symbols-outlined {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; /* Adjust font size to match dimensions */
+}
+@media (max-width: 768px) {
+    .card-wrapper-why-us {
+        flex-direction: column;
+    }
+    .why-us {
+        width: 100vw;
+    }
+}

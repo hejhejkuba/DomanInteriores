@@ -1,0 +1,20 @@
+.logo {
+    display: flex;
+    align-items: center; /* Wyrównanie pionowe do środka */
+    margin: 20px;
+}
+
+.logo img {
+    margin-right: 10px; /* Odstęp między obrazkiem a nagłówkiem */
+    height: 50px; /* Ustawienie stałej wysokości obrazu */
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    line-height: 50px; /* Ustawienie wysokości linii równej wysokości obrazu */
+}
+
+.logo h1.active {
+    color: #222;
+}

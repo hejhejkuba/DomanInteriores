@@ -1,0 +1,101 @@
+nav {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ece5da;
+    color: #FFF;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+}
+
+.navbar img {
+    max-width: 10vw;  /* było 14vw — teraz mniejsze */
+
+}
+.menu {
+    display: flex;
+    align-items: center;
+    margin: 0 -1rem;
+}
+
+.menu a {
+    margin: 0 1rem;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f6f6f6;
+}
+
+.hamburger {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none; /* Domyślnie ukryte na większych ekranach */
+    width: 2rem;
+    height: 2rem;
+    z-index: 100;
+}
+
+.hamburger span {
+    color: #000;
+    font-size: 2rem;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 98;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-100%);
+    background-color: #ece5da;
+    color: black;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+    color: #000;
+    background-color: #FFF;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .navbar img {
+        max-width: 20vw;
+    }
+}

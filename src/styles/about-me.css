@@ -1,0 +1,74 @@
+
+.about-me {
+    margin: 40px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    padding: 20px;
+}
+
+.about-me-text {
+    width: 50%;
+
+}
+
+.about-me-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-me-text p {
+    font-size: 1.0rem;
+    color: #333;
+}
+
+.about-me-photo-wrapper {
+    width: 50%;
+    position: relative;
+    height: 700px; /* Określ wysokość kontenera dla zdjęć */
+}
+
+.photo-background, .photo-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%; /* Zapewnienie, że zdjęcia mieszczą się w kontenerze */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.photo-background img, .photo-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Upewnij się, że zdjęcia wypełniają kontener */
+    border-radius: 10px;
+
+}
+
+.photo-background {
+    z-index: 1;
+    transform: translate(0px, 0px); /* Delikatne przesunięcie */
+    background-color: #ece5da;
+}
+
+.photo-front {
+    z-index: 2;
+    transform: translate(60px, 60px); /* Delikatne przesunięcie w przeciwnym kierunku */
+}
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+    }
+    .about-me-photo-wrapper {
+        width: 100%;
+        position: relative;
+        height: 300px; /* Określ wysokość kontenera dla zdjęć */
+    }
+    .about-me-text{
+        width: 100%;
+    }
+}
