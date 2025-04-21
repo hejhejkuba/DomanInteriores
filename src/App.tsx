@@ -108,6 +108,8 @@ const Gallery: React.FC = () => {
     const nextButtonRef = useRef<HTMLButtonElement>(null);
     const scrollbarThumbRef = useRef<HTMLDivElement>(null);
     const sliderScrollbarRef = useRef<HTMLDivElement>(null);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
 
     useEffect(() => {
         const initSlider = () => {
@@ -183,36 +185,54 @@ const Gallery: React.FC = () => {
             window.removeEventListener("resize", initSlider);
         };
     }, []);
-
     return (
-        <div className="container-holder">
-            <div className="container" ref={containerRef}>
-                <div className="slider-wrapper">
-                    <button id="prev-slide" ref={prevButtonRef} className="slide-button material-symbols-rounded">
-                        chevron_left
-                    </button>
-                    <ul className="image-list" ref={imageListRef}>
-                        {Array.from({ length: 15 }).map((_, index) => (
-                            <img
-                                key={index}
-                                className="image-item"
-                                src={`${index + 1}.jpg`}
-                                alt={`img-${index + 1}`}
-                                draggable="false"
-                            />
-                        ))}
-                    </ul>
-                    <button id="next-slide" ref={nextButtonRef} className="slide-button material-symbols-rounded">
-                        chevron_right
-                    </button>
-                </div>
-                <div className="slider-scrollbar" ref={sliderScrollbarRef}>
-                    <div className="scrollbar-track">
-                        <div className="scrollbar-thumb" ref={scrollbarThumbRef}></div>
+        <>
+            <div className="container-holder">
+                <div className="container" ref={containerRef}>
+                    <div className="slider-wrapper">
+                        <button id="prev-slide" ref={prevButtonRef} className="slide-button material-symbols-rounded">
+                            chevron_left
+                        </button>
+                        <ul className="image-list" ref={imageListRef}>
+                            {Array.from({ length: 15 }).map((_, index) => (
+                                <li key={index}>
+                                    <img
+                                        className="image-item"
+                                        src={`/DomanInteriores/${index + 1}.jpg`}
+                                        alt={`img-${index + 1}`}
+                                        draggable="false"
+                                        onClick={() => setSelectedImage(`/DomanInteriores/${index + 1}.jpg`)}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                        <button id="next-slide" ref={nextButtonRef} className="slide-button material-symbols-rounded">
+                            chevron_right
+                        </button>
+                    </div>
+                    <div className="slider-scrollbar" ref={sliderScrollbarRef}>
+                        <div className="scrollbar-track">
+                            <div className="scrollbar-thumb" ref={scrollbarThumbRef}></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            {selectedImage && (
+                <div className="fullscreen-overlay" onClick={() => setSelectedImage(null)}>
+                    <button
+                        className="close-button"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedImage(null);
+                        }}
+                    >
+                        ✕
+                    </button>
+                    <img src={selectedImage} alt="Fullscreen" className="fullscreen-image" />
+                </div>
+            )}
+        </>
     );
 };
 const AboutMe: React.FC = () => {
