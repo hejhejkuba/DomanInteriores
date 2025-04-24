@@ -10,17 +10,19 @@
 
 .about-me-text {
     width: 50%;
-
 }
 
 .about-me-text h1 {
-    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .about-me-text p {
     font-size: 1.0rem;
     color: #333;
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-word; /* odstęp między akapitami */
+
 }
 
 .about-me-photo-wrapper {

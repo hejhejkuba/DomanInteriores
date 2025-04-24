@@ -8,6 +8,9 @@
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     margin: 40px 10%; /* Adjusted margin for smaller screens */
     font-size: 1rem;
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-word;
 }
 
 .about > .left,

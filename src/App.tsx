@@ -20,6 +20,8 @@ import mojaHistoria from "./assets/img/01.jpg"
 import oNas from "./assets/img/02.webp"
 
 import png1 from "./assets/img/00.jpg"
+import fb_icon from "./assets/Icons/facebook.png"
+import instagram_icon from "./assets/Icons/instagram.png"
 
 
 import plan from "./assets/Icons/plan.png";
@@ -61,7 +63,7 @@ const Navbar: React.FC = () => {
                             </a>
                         </h3>
                         <h3>
-                            <a href="tel:725493813">725 493 813</a>
+                            <a href="tel:+34602697516">+34 602 69 75 16</a>
                         </h3>
                 </div>
 
@@ -319,15 +321,15 @@ const SocialMedia: React.FC = () => {
 
                 <div className="footer-contact">
                     <p>Email: <a href="mailto:doman.interiores@gmail.com">doman.interiores@gmail.com</a></p>
-                    <p>Tel: <a href="tel:725493813">725 493 813</a></p>
+                    <p>Tel: <a href="tel:+34602697516">+34 602 69 75 16</a></p>
                 </div>
 
                 <div className="footer-socials">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src="Images/Icons/facebook.png" alt="Facebook" />
+                        <img src={fb_icon} alt="Facebook" />
                     </a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src="Images/Icons/instagram.png" alt="Instagram" />
+                        <img src={instagram_icon} alt="Instagram" />
                     </a>
                 </div>
             </div>
