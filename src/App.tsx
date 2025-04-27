@@ -327,7 +327,7 @@ const SocialMedia: React.FC = () => {
                 </div>
 
                 <div className="footer-socials">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/DomanInteriores" target="_blank" rel="noopener noreferrer">
                         <img src={fb_icon} alt="Facebook" />
                     </a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
