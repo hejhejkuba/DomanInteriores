@@ -98,7 +98,7 @@ const WelcomeSection: React.FC = () => {
         <div className="welcome-part">
             <img src={png1} alt="Gallery"/>
             <div className="welcome-text">
-                <h1>Zmień swoje otoczenie już dzisiaj z Doman Interiores</h1>
+                <h1>Tu casa, mi visión</h1>
             </div>
         </div>
     );
@@ -189,14 +189,16 @@ const Gallery: React.FC = () => {
     }, []);
     return (
         <>
+            <h1 className="gallery-h1">Galeria</h1>
             <div className="container-holder">
+
                 <div className="container" ref={containerRef}>
                     <div className="slider-wrapper">
                         <button id="prev-slide" ref={prevButtonRef} className="slide-button material-symbols-rounded">
                             chevron_left
                         </button>
                         <ul className="image-list" ref={imageListRef}>
-                            {Array.from({ length: 15 }).map((_, index) => (
+                            {Array.from({length: 15}).map((_, index) => (
                                 <li key={index}>
                                     <img
                                         className="image-item"
@@ -231,7 +233,7 @@ const Gallery: React.FC = () => {
                     >
                         ✕
                     </button>
-                    <img src={selectedImage} alt="Fullscreen" className="fullscreen-image" />
+                    <img src={selectedImage} alt="Fullscreen" className="fullscreen-image"/>
                 </div>
             )}
         </>

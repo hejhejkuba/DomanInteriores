@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 .about2 > p {
-    width: 75%;
+    font-size: clamp(14px, 2vw, 18px);
 }
 .about2 > img {
     width: 100%; /* Make the image responsive */
@@ -23,7 +23,7 @@
         flex-direction: column; /* Change flex direction to row on larger screens */
     }
     .about2 > p {
-        width: 100%;
+        font-size: clamp(14px, 2vw, 18px);
 
     }
     .about2 > img {

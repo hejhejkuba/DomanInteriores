@@ -22,14 +22,13 @@
 
 }
 .contact a {
-    font-size: 1.0rem; /* zmniejszona czcionka linku */
-    padding: 10px; /* zmniejszony padding */
+    font-size: clamp(10px, 1vw, 14px);
 }
 .contact a:link{
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid transparent; /* Ustawienie początkowej granicy na przezroczystą */
     transition: border-color 0.5s ease-in, border-width 0.5s ease-in;
 }

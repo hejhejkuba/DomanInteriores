@@ -3,6 +3,10 @@
     justify-content: center;
     margin: 80px 10%;
 }
+.why-us-header h1{
+    font-size: clamp(24px, 5vw, 36px);
+    color: #333333;
+}
 
 .why-us {
     display: flex;
@@ -10,9 +14,6 @@
     align-items: center;
     justify-content: center;
     padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 1200px;
 }
@@ -26,29 +27,27 @@
     flex: 1;
     border-radius: 20px;
     background-color: #ece5da;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #a8a088;
     padding: 20px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.card-why-us:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 .name-why-us {
     text-align: center;
     font-weight: bold;
-    font-size: 24px;
+    font-size: clamp(18px, 4vw, 24px);
     color: #000;
 }
 .description-why-us {
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: clamp(14px, 2vw, 16px);
     color: #333;
     text-align: center;
-}
-.card-why-us > .card-content > .card-icon > .material-symbols-outlined {
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem; /* Adjust font size to match dimensions */
 }
 @media (max-width: 768px) {
     .card-wrapper-why-us {

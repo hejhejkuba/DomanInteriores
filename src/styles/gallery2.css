@@ -1,3 +1,9 @@
+.gallery-h1 {
+    margin-top: 4.0rem;
+    text-align: center;
+    font-size: clamp(24px, 5vw, 36px);
+    color: #333333;
+}
 .container-holder{
     margin-top: 40px;
     width: 100vw;
@@ -60,6 +66,7 @@
     height: 400px;
     object-fit: cover;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .container .slider-scrollbar {
     height: 24px;

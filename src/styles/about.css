@@ -22,7 +22,13 @@
 .about > .left {
     padding: 20px;
 }
-
+.about > .left h1 {
+    font-size: clamp(24px, 5vw, 36px);
+    margin-bottom: 20px;
+}
+.about > .left p {
+    font-size: clamp(14px, 2vw, 18px);
+}
 .about > .right > img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */

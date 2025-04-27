@@ -13,11 +13,13 @@
 }
 
 .about-me-text h1 {
+    font-size: clamp(24px, 5vw, 36px);
     margin-bottom: 20px;
+    color: #333333;
 }
 
 .about-me-text p {
-    font-size: 1.0rem;
+    font-size: clamp(14px, 2vw, 18px);
     color: #333;
     text-align: justify;
     hyphens: auto;
