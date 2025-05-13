@@ -19,7 +19,6 @@ import logo from "./assets/logo/7.png"
 import mojaHistoria from "./assets/img/01.jpg"
 import oNas from "./assets/img/02.webp"
 
-import png1 from "./assets/img/00.jpg"
 import fb_icon from "./assets/Icons/facebook.png"
 import instagram_icon from "./assets/Icons/instagram.png"
 
@@ -31,6 +30,7 @@ import renovation from "./assets/Icons/renovation.png";
 import outsourcing from "./assets/Icons/outsorcing.png";
 import EmailForm from "./components/EmailForm.tsx";
 import {t} from "./utils/t.ts";
+import ImageGrid from "./components/ImageGrid.tsx";
 
 
 const Navbar: React.FC = () => {
@@ -57,14 +57,12 @@ const Navbar: React.FC = () => {
                     </span>
                 </button>
                 <div className="contact">
-                        <h3>
-                            <a href="mailto:doman.interiores@gmail.com">
-                                doman.interiores@gmail.com
-                            </a>
-                        </h3>
-                        <h3>
-                            <a href="tel:+34602697516">+34 602 69 75 16</a>
-                        </h3>
+                    <h3>
+                        <a href="mailto:doman.interiores@gmail.com">
+                            doman.interiores@gmail.com
+                        </a>
+                        <a href="tel:+34602697516">+34 602 69 75 16</a>
+                    </h3>
                 </div>
 
                 {/* Desktop Menu + Kontakt */}
@@ -95,10 +93,12 @@ const Navbar: React.FC = () => {
 
 const WelcomeSection: React.FC = () => {
     return (
-        <div className="welcome-part">
-            <img src={png1} alt="Gallery"/>
-            <div className="welcome-text">
-                <h1>Tu casa, mi visión</h1>
+        <div className="welcome-section">
+            <div className="overlay"></div>
+            <div className="welcome-content">
+                <h2 className="subtitle">DOMAN INTERIORES</h2>
+                <h1 className="main-title">{'“Tu casa, nuestra pasión.”'}</h1>
+                <button className="cta-button">DOWIEDZ SIĘ WIĘCEJ</button>
             </div>
         </div>
     );
@@ -189,7 +189,7 @@ const Gallery: React.FC = () => {
     }, []);
     return (
         <>
-            <h1 className="gallery-h1">Galeria</h1>
+            <h1 className="gallery-h1">Wizualizacje</h1>
             <div className="container-holder">
 
                 <div className="container" ref={containerRef}>
@@ -384,6 +384,7 @@ const HomePage: React.FC = () => {
         <AboutUs/>
         <Services/>
         <Gallery/>
+        <ImageGrid />
         <WhyUs/>
         <EmailForm/>
         <SocialMedia/>

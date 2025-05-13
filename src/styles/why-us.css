@@ -1,7 +1,7 @@
 .why-us-container {
     display: flex;
     justify-content: center;
-    margin: 80px 10%;
+    margin: 40px 10%;
 }
 .why-us-header h1{
     font-size: clamp(24px, 5vw, 36px);

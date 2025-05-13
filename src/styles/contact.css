@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center; /* Wyśrodkowanie poziome elementów */
     align-items: center; /* Wyśrodkowanie pionowe elementów */
-    gap: 20px; /* Odstęp między elementami */
+    gap: 10px; /* Odstęp między elementami */
     flex-wrap: wrap; /* Umożliwia zawijanie elementów w pionie */
     background-color: #ece5da;
     color: gray;
@@ -22,19 +22,18 @@
 
 }
 .contact a {
-    font-size: clamp(10px, 1vw, 14px);
+    font-size: clamp(12px, 1vw, 14px);
+    margin: 1vw;
 }
 .contact a:link{
     text-decoration: none;
     color: black;
-    font-weight: bold;
     padding: 15px;
     border: 1px solid transparent; /* Ustawienie początkowej granicy na przezroczystą */
     transition: border-color 0.5s ease-in, border-width 0.5s ease-in;
 }
 .contact a:hover{
     text-decoration: none;
-    font-weight: bold;
     border: 1px solid black;
 }
 
@@ -43,6 +42,7 @@
         width: 100%;
         flex-direction: column; /* Zmiana układu na pionowy */
         align-items: flex-start; /* Wyrównanie elementów do lewej */
+        gap: 10px;
     }
     .contact div { /* Zapewnienie pełnej szerokości */
         margin: 0;
