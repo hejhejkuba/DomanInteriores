@@ -43,10 +43,12 @@
         flex-direction: column; /* Zmiana układu na pionowy */
         align-items: flex-start; /* Wyrównanie elementów do lewej */
         gap: 10px;
+
     }
     .contact div { /* Zapewnienie pełnej szerokości */
         margin: 0;
         padding: 0;
         text-align: left; /* Wyrównanie tekstu do lewej */
+
     }
 }

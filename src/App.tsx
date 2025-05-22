@@ -10,7 +10,6 @@ import "./styles/social-media.css";
 import "./styles/styles.css";
 import "./styles/welcome.css";
 
-import "./styles/about2.css";
 import "./styles/about-me.css";
 import "./styles/why-us.css";
 import "./styles/about.css";
@@ -28,10 +27,16 @@ import housePlan from "./assets/Icons/house-plan.png";
 import talk from "./assets/Icons/talk.png";
 import renovation from "./assets/Icons/renovation.png";
 import outsourcing from "./assets/Icons/outsorcing.png";
-import EmailForm from "./components/EmailForm.tsx";
 import {t} from "./utils/t.ts";
 import ImageGrid from "./components/ImageGrid.tsx";
+import ContactSection from "./components/ContactSection.tsx";
 
+const scrollToElement = (selector: string) => {
+    const element = document.querySelector(selector);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    }
+};
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +103,7 @@ const WelcomeSection: React.FC = () => {
             <div className="welcome-content">
                 <h2 className="subtitle">DOMAN INTERIORES</h2>
                 <h1 className="main-title">{'“Tu casa, nuestra pasión.”'}</h1>
-                <button className="cta-button">DOWIEDZ SIĘ WIĘCEJ</button>
+                <button className="cta-button" onClick={() => scrollToElement(".about-me")}>DOWIEDZ SIĘ WIĘCEJ</button>
             </div>
         </div>
     );
@@ -386,7 +391,7 @@ const HomePage: React.FC = () => {
         <Gallery/>
         <ImageGrid />
         <WhyUs/>
-        <EmailForm/>
+        <ContactSection/>
         <SocialMedia/>
     </div>)
 };

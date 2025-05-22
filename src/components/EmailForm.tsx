@@ -6,6 +6,7 @@ const EmailForm: React.FC = () => {
     const [formData, setFormData] = useState({
         from_name: "",
         reply_to: "",
+        phone: "",
         message: "",
     });
 
@@ -29,7 +30,7 @@ const EmailForm: React.FC = () => {
 
             await emailjs.send(serviceId, templateId, formData, userId);
             setResponseMessage("E-mail został wysłany pomyślnie!");
-            setFormData({ from_name: "", reply_to: "", message: "" });
+            setFormData({ from_name: "", reply_to: "", phone: "", message: "" });
         } catch (error) {
             console.error("Błąd podczas wysyłania e-maila:", error);
             setResponseMessage("Wystąpił problem podczas wysyłania e-maila. Spróbuj ponownie.");
@@ -62,6 +63,21 @@ const EmailForm: React.FC = () => {
                         name="reply_to"
                         value={formData.reply_to}
                         onChange={handleChange}
+                        placeholder="example@gmail.com"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="phone">Telefon:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="123-123-123"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        pattern="[0-9+\-\s]*"
                         required
                     />
                 </div>
@@ -71,6 +87,7 @@ const EmailForm: React.FC = () => {
                     <textarea
                         id="message"
                         name="message"
+                        placeholder="Message"
                         value={formData.message}
                         onChange={handleChange}
                         required

@@ -5,9 +5,9 @@
 .about {
     color: #333333;
     display: flex;
+    align-items: center;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     margin: 40px 10%; /* Adjusted margin for smaller screens */
-    font-size: 1rem;
     text-align: justify;
     hyphens: auto;
     word-break: break-word;
@@ -17,27 +17,25 @@
 .about > .right {
     width: 100%; /* Full width on smaller screens */
     margin-bottom: 20px; /* Add some space between left and right on smaller screens */
-}
-
-.about > .left {
     padding: 20px;
 }
+
 .about > .left h1 {
     font-size: clamp(24px, 5vw, 36px);
     margin-bottom: 20px;
+
 }
 .about > .left p {
     font-size: clamp(14px, 2vw, 18px);
 }
 .about > .right > img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
     border-radius: 20px;
     object-fit: cover;
 }
 
 /* Media query for screens larger than 768px */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
     .about {
         margin: 40px 10%; /* Revert margin for larger screens */
     }

@@ -2,7 +2,6 @@
 .about-me {
     margin: 40px 10%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 4vw;
     padding: 20px;
@@ -63,14 +62,13 @@
     z-index: 2;
     transform: translate(60px, 60px); /* Delikatne przesunięcie w przeciwnym kierunku */
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .about-me {
         flex-direction: column;
     }
     .about-me-photo-wrapper {
         width: 100%;
         position: relative;
-        height: 300px; /* Określ wysokość kontenera dla zdjęć */
     }
     .about-me-text{
         width: 100%;

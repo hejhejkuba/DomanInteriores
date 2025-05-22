@@ -1,0 +1,16 @@
+.contact-section {
+    margin: 40px 10%;
+    min-width: 376px;
+    display: flex;
+    align-items: stretch; /* Równa wysokość */
+    justify-content: center;
+    gap: clamp(1vw, 5vw, 10vw);;
+    padding: 0;
+    background-color: #F4F0E6;
+
+}
+@media (max-width: 676px) {
+    .contact-section {
+        flex-direction: column;
+    }
+}
