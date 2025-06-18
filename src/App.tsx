@@ -207,7 +207,7 @@ const Gallery: React.FC = () => {
                                 <li key={index}>
                                     <img
                                         className="image-item"
-                                        src={`/DomanInteriores/${index + 1}.jpg`}
+                                        src={`/${index + 1}.jpg`}
                                         alt={`img-${index + 1}`}
                                         draggable="false"
                                         onClick={() => setSelectedImage(`/DomanInteriores/${index + 1}.jpg`)}

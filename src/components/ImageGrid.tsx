@@ -38,7 +38,7 @@ const ImageGrid: React.FC = () => {
                       alt={`Image ${index + 1}`}
                       className="image-grid-img"
                       draggable="false"
-                      onClick={() => setSelectedImage(`/DomanInteriores/imgTen/${index + 1}.png`)}
+                      onClick={() => setSelectedImage(`/imgTen/${index + 1}.png`)}
                   />
               ))}
             </div>
