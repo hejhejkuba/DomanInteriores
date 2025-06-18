@@ -23,7 +23,7 @@ const ImageGrid: React.FC = () => {
 
   return (
       <>
-        <h1>Wizualizacje Teneryfa</h1>
+        <h1>Realizacje Teneryfa</h1>
       <div className="image-grid-container">
         {loading ? (
             <div className="image-grid-loader-wrapper">

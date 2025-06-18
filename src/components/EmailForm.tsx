@@ -63,7 +63,6 @@ const EmailForm: React.FC = () => {
                         name="reply_to"
                         value={formData.reply_to}
                         onChange={handleChange}
-                        placeholder="example@gmail.com"
                         required
                     />
                 </div>
@@ -74,7 +73,6 @@ const EmailForm: React.FC = () => {
                         type="tel"
                         id="phone"
                         name="phone"
-                        placeholder="123-123-123"
                         value={formData.phone}
                         onChange={handleChange}
                         pattern="[0-9+\-\s]*"
@@ -87,7 +85,6 @@ const EmailForm: React.FC = () => {
                     <textarea
                         id="message"
                         name="message"
-                        placeholder="Message"
                         value={formData.message}
                         onChange={handleChange}
                         required
