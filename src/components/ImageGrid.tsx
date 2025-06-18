@@ -11,7 +11,7 @@ const ImageGrid: React.FC = () => {
       setLoading(true);
 
       // Generujemy ścieżki lokalne do obrazów
-      const newImages = Array.from({ length: 25 }, (_, i) => `/DomanInteriores/imgTen/${i + 1}.png`);
+      const newImages = Array.from({ length: 25 }, (_, i) => `/imgTen/${i + 1}.png`);
 
       await new Promise(res => setTimeout(res, 1000)); // symulacja ładowania
       setImages(newImages);
