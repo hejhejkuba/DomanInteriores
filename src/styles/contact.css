@@ -22,6 +22,7 @@
 
 }
 .contact a {
+    margin: 1vw;
     font-size: clamp(12px, 1vw, 14px);
 }
 .contact a:link{
