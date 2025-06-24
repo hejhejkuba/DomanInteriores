@@ -16,14 +16,13 @@
 
 .contact h3 {
     width: 100%;
-    margin: 0;
+    margin: auto;
     text-align: center;
     padding: 15px;
 
 }
 .contact a {
     font-size: clamp(12px, 1vw, 14px);
-    margin: 1vw;
 }
 .contact a:link{
     text-decoration: none;
@@ -31,6 +30,7 @@
     padding: 15px;
     border: 1px solid transparent; /* Ustawienie początkowej granicy na przezroczystą */
     transition: border-color 0.5s ease-in, border-width 0.5s ease-in;
+    white-space: nowrap;
 }
 .contact a:hover{
     text-decoration: none;

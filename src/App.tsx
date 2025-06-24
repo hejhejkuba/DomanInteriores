@@ -63,9 +63,7 @@ const Navbar: React.FC = () => {
                 </button>
                 <div className="contact">
                     <h3>
-                        <a href="mailto:doman.interiores@gmail.com">
-                            doman.interiores@gmail.com
-                        </a>
+                        <a href="mailto:doman.interiores@gmail.com">doman.interiores@gmail.com</a>
                         <a href="tel:+34602697516">+34 602 69 75 16</a>
                     </h3>
                 </div>
@@ -210,7 +208,7 @@ const Gallery: React.FC = () => {
                                         src={`/${index + 1}.jpg`}
                                         alt={`img-${index + 1}`}
                                         draggable="false"
-                                        onClick={() => setSelectedImage(`/DomanInteriores/${index + 1}.jpg`)}
+                                        onClick={() => setSelectedImage(`/${index + 1}.jpg`)}
                                     />
                                 </li>
                             ))}
