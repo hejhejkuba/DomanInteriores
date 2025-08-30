@@ -77,9 +77,8 @@ const Navbar: React.FC = () => {
                         <a onClick={() => scrollToElement(".container-holder")}>{t("navBarProjects")}</a>
                         <a onClick={() => scrollToElement(".slide-container")}>{t("services")}</a>
                         <a onClick={() => scrollToElement(".email-form")}>{t("contactText")}</a>
+                        <LanguageSwitcher/>
                     </div>
-
-                    <LanguageSwitcher/>
                 </div>
 
 
@@ -89,6 +88,7 @@ const Navbar: React.FC = () => {
                     <a onClick={() => scrollToElement(".container-holder")}>{t("navBarProjects")}</a>
                     <a onClick={() => scrollToElement(".slide-container")}>{t("services")}</a>
                     <a onClick={() => scrollToElement(".email-form")}>{t("contactText")}</a>
+                    <LanguageSwitcher/>
                 </div>
             </nav>
         </header>
