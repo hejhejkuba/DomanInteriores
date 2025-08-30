@@ -1,12 +1,14 @@
 import React from "react";
 // ContactDetails.tsx
 import "../styles/contact-details.css";
+import {useI18n} from "../i18";
 const ContactDetails: React.FC = () => {
+    const  { t } = useI18n();
     return (
         <div className="contact-details">
-            <h2>Kontakt</h2>
+            <h2>{t("contactText")}</h2>
             <p><strong>Doman Interiores</strong></p>
-            <p>Zmiana przestrzeni z pasją ✨</p>
+            <p>{t("socialMediaText")}</p>
             <p><strong>Email:</strong> <a href="mailto:doman.interiores@gmail.com">doman.interiores@gmail.com</a></p>
             <p><strong>Tel:</strong> <a href="tel:+34602697516">+34 602 69 75 16</a></p>
             <div className="social-media">

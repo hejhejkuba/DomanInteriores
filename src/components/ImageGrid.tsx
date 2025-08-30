@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/ImageGrid.css';
+import {useI18n} from "../i18";
 
 const ImageGrid: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
+    const { t } = useI18n();
   useEffect(() => {
     const fetchImages = async () => {
       setLoading(true);
@@ -23,7 +24,7 @@ const ImageGrid: React.FC = () => {
 
   return (
       <>
-        <h1>Realizacje Teneryfa</h1>
+        <h1>{t("realizationText")}</h1>
       <div className="image-grid-container">
         {loading ? (
             <div className="image-grid-loader-wrapper">

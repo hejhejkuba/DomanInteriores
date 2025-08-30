@@ -27,30 +27,32 @@ import housePlan from "./assets/Icons/house-plan.png";
 import talk from "./assets/Icons/talk.png";
 import renovation from "./assets/Icons/renovation.png";
 import outsourcing from "./assets/Icons/outsorcing.png";
-import {t} from "./utils/t.ts";
 import ImageGrid from "./components/ImageGrid.tsx";
 import ContactSection from "./components/ContactSection.tsx";
+import LanguageSwitcher from "./components/LanguageSwitcher.tsx";
+import {useI18n} from "./i18";
+
 
 const scrollToElement = (selector: string) => {
     const element = document.querySelector(selector);
     if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({behavior: "smooth"});
     }
 };
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
     const scrollToElement = (selector: string) => {
         const element = document.querySelector(selector);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            element.scrollIntoView({behavior: "smooth"});
         }
         setIsOpen(false); // zamknij menu
     };
+    const { t } = useI18n();
     return (
         <header>
             <nav className="navbar">
@@ -71,23 +73,22 @@ const Navbar: React.FC = () => {
                 {/* Desktop Menu + Kontakt */}
                 <div style={{display: "flex", alignItems: "center", gap: "2rem"}}>
                     <div className="menu">
-                        <a onClick={() => scrollToElement(".about-me")}>O nas</a>
-                        <a onClick={() => scrollToElement(".container-holder")}>Projekty</a>
-                        <a onClick={() => scrollToElement(".slide-container")}>Usługi</a>
-                        <a onClick={() => scrollToElement(".email-form")}>Kontakt</a>
+                        <a onClick={() => scrollToElement(".about-me")}>{t("aboutUs")}</a>
+                        <a onClick={() => scrollToElement(".container-holder")}>{t("navBarProjects")}</a>
+                        <a onClick={() => scrollToElement(".slide-container")}>{t("services")}</a>
+                        <a onClick={() => scrollToElement(".email-form")}>{t("contactText")}</a>
                     </div>
 
-
+                    <LanguageSwitcher/>
                 </div>
-
 
 
                 {/* Mobile Menu */}
                 <div className={`mobile-menu ${isOpen ? "is-open" : ""}`}>
-                    <a onClick={() => scrollToElement(".about-me")}>O nas</a>
-                    <a onClick={() => scrollToElement(".container-holder")}>Projekty</a>
-                    <a onClick={() => scrollToElement(".slide-container")}>Usługi</a>
-                    <a onClick={() => scrollToElement(".email-form")}>Kontakt</a>
+                    <a onClick={() => scrollToElement(".about-me")}>{t("aboutUs")}</a>
+                    <a onClick={() => scrollToElement(".container-holder")}>{t("navBarProjects")}</a>
+                    <a onClick={() => scrollToElement(".slide-container")}>{t("services")}</a>
+                    <a onClick={() => scrollToElement(".email-form")}>{t("contactText")}</a>
                 </div>
             </nav>
         </header>
@@ -95,13 +96,15 @@ const Navbar: React.FC = () => {
 };
 
 const WelcomeSection: React.FC = () => {
+    const { t } = useI18n();
     return (
         <div className="welcome-section">
             <div className="overlay"></div>
             <div className="welcome-content">
                 <h2 className="subtitle">DOMAN INTERIORES</h2>
                 <h1 className="main-title">{'“Tu casa, nuestra pasión.”'}</h1>
-                <button className="cta-button" onClick={() => scrollToElement(".about-me")}>DOWIEDZ SIĘ WIĘCEJ</button>
+                <button className="cta-button"
+                        onClick={() => scrollToElement(".about-me")}>{t("welcomeSectionShowMore")}</button>
             </div>
         </div>
     );
@@ -114,7 +117,7 @@ const Gallery: React.FC = () => {
     const scrollbarThumbRef = useRef<HTMLDivElement>(null);
     const sliderScrollbarRef = useRef<HTMLDivElement>(null);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
+    const {t } = useI18n();
 
     useEffect(() => {
         const initSlider = () => {
@@ -156,7 +159,7 @@ const Gallery: React.FC = () => {
             // Slide images with buttons
             const handleSlide = (direction: number) => {
                 const scrollAmount = imageList.clientWidth * direction;
-                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+                imageList.scrollBy({left: scrollAmount, behavior: "smooth"});
             };
 
             prevButton.addEventListener("click", () => handleSlide(-1));
@@ -192,7 +195,7 @@ const Gallery: React.FC = () => {
     }, []);
     return (
         <>
-            <h1 className="gallery-h1">Wizualizacje</h1>
+            <h1 className="gallery-h1">{t("visualizationText")}</h1>
             <div className="container-holder">
 
                 <div className="container" ref={containerRef}>
@@ -243,10 +246,11 @@ const Gallery: React.FC = () => {
     );
 };
 const AboutMe: React.FC = () => {
+    const {t} = useI18n();
     return (
         <div className="about-me">
             <div className="about-me-text">
-                <h1>O mnie</h1>
+                <h1>{t("aboutMe")}</h1>
                 <p>{t("aboutMe1")}</p>
                 <br/>
                 <p>{t("aboutMe2")}</p>
@@ -264,11 +268,12 @@ const AboutMe: React.FC = () => {
 };
 
 const AboutUs: React.FC = () => {
+    const {t} = useI18n();
     return (
         <div className="about-wrapper">
             <div className="about">
                 <div className="left">
-                    <h1>O nas</h1>
+                    <h1>{t("aboutUs")}</h1>
                     <p>{t("aboutUs1")}</p>
                     <br/>
                     <p>{t("aboutUs2")}</p>
@@ -284,11 +289,12 @@ const AboutUs: React.FC = () => {
 };
 
 const WhyUs: React.FC = () => {
+    const {t} = useI18n();
     return (
         <div className="why-us-container">
             <div className="why-us">
                 <div className="why-us-header">
-                    <h1>Dlaczego My?</h1>
+                    <h1>{t("whyUsWhyUsText")}</h1>
                 </div>
                 <div className="card-wrapper-why-us">
                     <div className="card-why-us">
@@ -316,12 +322,13 @@ const WhyUs: React.FC = () => {
     );
 };
 const SocialMedia: React.FC = () => {
+    const { t } = useI18n();
     return (
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-logo">
                     <h2>Doman Interiores</h2>
-                    <p>Zmiana przestrzeni z pasją ✨</p>
+                    <p>{t("socialMediaText")}</p>
                 </div>
 
                 <div className="footer-contact">
@@ -331,10 +338,10 @@ const SocialMedia: React.FC = () => {
 
                 <div className="footer-socials">
                     <a href="https://www.facebook.com/DomanInteriores" target="_blank" rel="noopener noreferrer">
-                        <img src={fb_icon} alt="Facebook" />
+                        <img src={fb_icon} alt="Facebook"/>
                     </a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src={instagram_icon} alt="Instagram" />
+                        <img src={instagram_icon} alt="Instagram"/>
                     </a>
                 </div>
             </div>
@@ -346,17 +353,18 @@ const SocialMedia: React.FC = () => {
     );
 };
 const Services: React.FC = () => {
+    const {t} = useI18n();
     const services = [
         {img: plan, title: t("projectServiceHeader"), description: t("projectServiceText")},
-        {img: housePlan, title: t("projectServiceHeader2"), description: t("projectServiceText2") },
-        { img: talk, title: t("projectServiceHeader3"), description: t("projectServiceText3") },
-        { img: renovation, title: t("projectServiceHeader4"), description: t("projectServiceText4") },
-        { img: outsourcing, title: t("projectServiceHeader5"), description: t("projectServiceText5") },
+        {img: housePlan, title: t("projectServiceHeader2"), description: t("projectServiceText2")},
+        {img: talk, title: t("projectServiceHeader3"), description: t("projectServiceText3")},
+        {img: renovation, title: t("projectServiceHeader4"), description: t("projectServiceText4")},
+        {img: outsourcing, title: t("projectServiceHeader5"), description: t("projectServiceText5")},
     ];
 
     return (
         <div className="slide-container">
-            <h1>Usługi</h1>
+            <h1>{t("services")}</h1>
             <div className="slide-content">
                 <div className="card-wrapper">
                     {services.map((service, index) => (
@@ -364,7 +372,7 @@ const Services: React.FC = () => {
                             <div className="image-content">
                                 <span className="overlay"></span>
                                 <div className="card-image">
-                                    <img src={service.img} className="card-img" alt={service.title} />
+                                    <img src={service.img} className="card-img" alt={service.title}/>
                                 </div>
                             </div>
                             <div className="card-content">
@@ -380,18 +388,18 @@ const Services: React.FC = () => {
 };
 const HomePage: React.FC = () => {
     return (
-    <div>
-        <Navbar/>
-        <WelcomeSection/>
-        <AboutMe/>
-        <AboutUs/>
-        <Services/>
-        <Gallery/>
-        <ImageGrid />
-        <WhyUs/>
-        <ContactSection/>
-        <SocialMedia/>
-    </div>)
+        <div>
+            <Navbar/>
+            <WelcomeSection/>
+            <AboutMe/>
+            <AboutUs/>
+            <Services/>
+            <Gallery/>
+            <ImageGrid/>
+            <WhyUs/>
+            <ContactSection/>
+            <SocialMedia/>
+        </div>)
 };
 
 export default HomePage;

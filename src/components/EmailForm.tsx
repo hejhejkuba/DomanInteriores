@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "../styles/emailFormStyles.css";
+import {useI18n} from "../i18";
 
 const EmailForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ const EmailForm: React.FC = () => {
         phone: "",
         message: "",
     });
-
+    const { t } = useI18n();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [responseMessage, setResponseMessage] = useState<string | null>(null);
 
@@ -29,11 +30,11 @@ const EmailForm: React.FC = () => {
             const userId = "WHqpHb_TKuiwztvYR";
 
             await emailjs.send(serviceId, templateId, formData, userId);
-            setResponseMessage("E-mail został wysłany pomyślnie!");
+            setResponseMessage(t("sendEmailResponseMsg"));
             setFormData({ from_name: "", reply_to: "", phone: "", message: "" });
         } catch (error) {
             console.error("Błąd podczas wysyłania e-maila:", error);
-            setResponseMessage("Wystąpił problem podczas wysyłania e-maila. Spróbuj ponownie.");
+            setResponseMessage(t("sendEmailResponseError"));
         } finally {
             setIsSubmitting(false);
         }
@@ -41,10 +42,10 @@ const EmailForm: React.FC = () => {
 
     return (
         <div className="email-form">
-            <h2>Wyślij wiadomość</h2>
+            <h2>{t("sendEmailText")}</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="from_name">Imię:</label>
+                    <label htmlFor="from_name">{t("sendEmailName")}</label>
                     <input
                         type="text"
                         id="from_name"
@@ -56,7 +57,7 @@ const EmailForm: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="reply_to">E-mail:</label>
+                    <label htmlFor="reply_to">{t("sendEmailEmail")}</label>
                     <input
                         type="email"
                         id="reply_to"
@@ -68,7 +69,7 @@ const EmailForm: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="phone">Telefon:</label>
+                    <label htmlFor="phone">{t("sendEmailPhone")}</label>
                     <input
                         type="tel"
                         id="phone"
@@ -81,7 +82,7 @@ const EmailForm: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="message">Wiadomość:</label>
+                    <label htmlFor="message">{t("sendEmailMessage")}</label>
                     <textarea
                         id="message"
                         name="message"
@@ -92,7 +93,7 @@ const EmailForm: React.FC = () => {
                 </div>
 
                 <button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Wysyłanie..." : "Wyślij"}
+                    {isSubmitting ? t("sendEmailSending") : t("sendEmailSend")}
                 </button>
             </form>
 
